@@ -45,3 +45,5 @@ def testModel():
             print("Error")
         finally:
             imageNumber += 1
+
+testModel()
