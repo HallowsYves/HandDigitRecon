@@ -3,21 +3,21 @@ from tkinter import ttk
 
 # Setup
 window = tk.Tk()
-window.geometry('100x100')
+window.geometry('500x500')
 window.title('Canvas')
 
 
 
 
 # canvas
-canvas = tk.Canvas(window, bg= 'white')
-canvas.pack()
+canvas = tk.Canvas(window, width=400, height=400, bg= 'black')
+canvas.pack(pady=50, padx=50)
 
 def drawOnCanvas(event):
     x = event.x
     y = event.y
-    brushSize = 1    
-    canvas.create_oval((x - brushSize / 2, y - brushSize / 2, x + brushSize / 2, y + brushSize / 2), fill='black')
+    brushSize = 10  
+    canvas.create_oval((x - brushSize / 2, y - brushSize / 2, x + brushSize / 2, y + brushSize / 2), fill='white', outline='white')
 
 # Button
 def clearCanvas():
